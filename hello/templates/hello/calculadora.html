@@ -1,0 +1,19 @@
+{% extends "hello/layout.html" %}
+
+{% block main %}
+  
+<h2>Calculadora mais poderosa do mundo</h2>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="text" name="expressao" placeholder="insira expressao aritmetica">
+    <input type="submit" value="calcular">
+</form>
+
+{% if resultado != None %}  
+    <h4>Resultado</h4>
+    <p>{{expressao}} = {{resultado}}</p>
+{% endif %}
+
+{% endblock main %}
+

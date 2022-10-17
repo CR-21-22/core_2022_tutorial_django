@@ -1,0 +1,38 @@
+{% extends "hello/layout.html" %}
+
+{% block main %}
+  
+    {% if hour >= 12 %}
+        <p>Boa tarde!</p>
+    {% else %}
+        <p>Bom dia!</p>
+    {% endif %}
+
+    <p>Olá {{ nome }}, bem-vindo à minha primeira página HTML, criada no ano de {{ ano }}</p>
+
+    <p>Lista de amigos:</p>
+    <ul>
+        {% for amigo in amigos %}
+          <li>{{amigo}}</li>
+        {% endfor %}
+    </ul>
+    
+    <p>Idades dos amigos:</p>
+    <ul>
+        {% for amigo,idade in idades.items %}
+          <li>{{amigo}} tem {{ idade}} anos </li>
+        {% endfor %}
+    </ul>
+
+
+    <p>Amigos da BD:</p>
+    <ul>
+        {% for amigo in amigos_BD %}
+          <li> {{amigo}}: {{amigo.nome}} tem {{ amigo.idade}} anos</li>
+        {% endfor %}
+    </ul>
+
+    {% load static %}
+    <img src="{% static 'hello/redes.jpg' %}" width="50%" alt="">
+
+{% endblock main %}

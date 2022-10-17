@@ -1,0 +1,109 @@
+<html> 
+    <head>
+        <!-- comentario no HTML.
+            
+            O elemento head tem informação que não mostrada no browser -->
+
+        <!-- O elemento style contém regras de estilização -->
+        <style>
+            /* dentro dum elemento style, um comentario é como em C */
+            h1 { /* seletor de tipo (etiqueta) */
+                color: green; /* cor da fonte */
+            }
+            
+            h2 {
+                color: dodgerblue;
+            }
+
+            #intro {  /* seletor de id */
+                color: red;
+            }
+
+            td {
+                border: 1px solid black;
+                background-color: khaki;
+            }
+
+            body {
+                background-color: lightgrey;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <p>Menu: 
+            <a href="{% url 'index' %}">index</a>
+            <a href="{% url 'intro' %}">intro</a>
+        </p>
+    
+
+        <h1>Este é um titulo (etiqueta h1)</h1>
+
+        <h2 id="intro">Introdução</h2>
+        <p>O HTML (Hyper-Text Markup Language) serve para estruturar conteúdos.</p>
+        <p>O CSS (Cascade Style Sheet) ou o elemento style permite estilizar conteúdos (com cores, tamanhos, etc)</p>
+
+        <h2>Parágrafos</h2>
+
+        <p>Este é um parágrafo (elemento p) com muitas palavras muitas palavras muitas palavras muitas palavras muitas palavras.</p>
+
+        <p>Este é outro parágrafo com  muitas palavras muitas palavras muitas palavras muitas palavras muitas palavras muitas palavras muitas palavras muitas palavras</p>
+
+        <h2>Formatação</h2>
+
+        <p>Eis uma frase muito inteligente em <b>bold (etiqueta b)</b> e <i>italico (etiqueta i)</i>.
+        </p>
+
+
+        <h2>Listas</h2>
+        <p>Eis uma lista não-ordenada (etiqueta ul, "unordered list"):</p>
+        <ul>
+            <li>item (elemento li)</li>
+            <li>
+                outro item
+                <ul>
+                    <li>sub-item</li>
+                    <li>sub-item</li>
+                </ul>
+            </li>
+            <li>mais outro</li>
+        </ul>
+        
+        <p>Eis uma lista ordenada (etiqueta ol):</p>
+        <ol>
+            <li>primeira linha</li>
+            <li>segunda linha</li>
+            <li>terceira linha</li>
+        </ol>
+
+        <h2>Tabela</h2>
+
+        <p>Uma tabela é um elemento table, com linhas (tr, table row), contendo celulas (td, table data)</p>
+        <table>
+            <tr>
+                <td>coluna 1</td>
+                <td>coluna 2</td>
+                <td>coluna 3</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </table>
+        
+    </body>
+</html>

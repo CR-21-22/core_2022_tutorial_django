@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">  <!-- permite usar emojis -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoRe</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <p>Menu: 
+        <a href="{% url 'index' %}">index</a>
+        <a href="{% url 'calculadora' %}">calculadora</a>
+        <a href="{% url 'sobre' %}">sobre</a>
+        <a href="{% url 'conteudo' %}">conteudo</a>        
+        <a href="{% url 'intro' %}">intro</a>
+    </p>
+
+    <h1>A minha primeira página</h1>
+    
+    {% block main %}
+    {% endblock main %}
+
+</body>
+</html>
