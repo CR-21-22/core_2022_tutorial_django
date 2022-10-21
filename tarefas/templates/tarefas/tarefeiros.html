@@ -1,0 +1,22 @@
+{% extends "tarefas/layout.html" %}
+
+{% block main %}
+      
+<h3>Lista de Tarefeiros:</h3>
+<ul>
+    {% for tarefeiro in tarefeiros  %}
+      <li>{{ tarefeiro }}
+
+        <ul>
+          {% for tarefa in tarefeiro.tarefas.all %}
+            <li> {{ tarefa.descricao }} ({{ tarefa.prioridade }}) </li>
+          {% endfor %}
+        </ul>
+
+      </li>
+    {% endfor %}
+
+</ul>
+
+
+{% endblock main %}

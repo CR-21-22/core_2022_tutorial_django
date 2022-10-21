@@ -1,0 +1,16 @@
+{% extends "hello/layout.html" %}
+
+{% block main %}
+  
+  <form action="" method="POST">
+
+    {% csrf_token %}
+    <table>
+      {{ form }}
+    </table>
+    <input type="submit" value="guardar">
+
+  </form>
+
+
+{% endblock main %}

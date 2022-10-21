@@ -1,13 +1,14 @@
-from django.http import HttpResponse
-from django.shortcuts import render
+from django import urls
+
+from django.shortcuts import redirect, render
 import datetime 
 from .models import Amigo
+from .forms import AmigoForm
 
 # Create your views here.
 
 def index_view(request):
 
-    
     context = {
         'nome': 'lúcio'.title(),
         'ano': datetime.datetime.today().year,
@@ -18,6 +19,15 @@ def index_view(request):
     }
 
     return render(request, 'hello/index.html', context)
+
+def novo_amigo_view(request):
+    form = AmigoForm(request.POST or None)
+    if form.is_valid:
+        form.save()
+        return redirect(urls.reverse('index'))
+
+    context = {'form': form}
+    return render(request,'hello/novo_amigo.html', context)
 
 def sobre_view(request):
     return render(request, 'hello/sobre.html')
@@ -40,8 +50,6 @@ def calculadora_view(request):
         'hello/calculadora.html', 
         context
         )
-
-
 
 def conteudo_view(request):
     return render(request, 'hello/conteudo.html')

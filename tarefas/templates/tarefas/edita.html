@@ -1,0 +1,16 @@
+{% extends "tarefas/layout.html" %}
+
+{% block main %}
+  
+<h3>Edita Tarefa</h3>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  {{form.as_p}}
+  <input type="submit" value="Gravar">
+</form>
+<a href="{% url 'apaga' tarefa.id %}">
+  <button>Apagar</button>
+</a>
+
+{% endblock main %}

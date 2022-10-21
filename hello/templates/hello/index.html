@@ -31,7 +31,13 @@
           <li> {{amigo}}: {{amigo.nome}} tem {{ amigo.idade}} anos</li>
         {% endfor %}
     </ul>
+    
+    <a href="{% url 'novo_amigo' %}">
+      <button>Novo amigo</button>
+    </a>
 
+    <br>
+    <br>
     {% load static %}
     <img src="{% static 'hello/redes.jpg' %}" width="50%" alt="">
 
