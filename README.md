@@ -1,5 +1,5 @@
-# core_2022_webapp_01
+# tutorial django apps
 
-WebApps em Djando desenvolvida durante as aulas:
+WebApps em Djando desenvolvidas durante as aulas:
 * hello
 * tarefas
