@@ -19,7 +19,6 @@ def edita_view(request, tarefa_id):
         form.save()
         return redirect('lista')
 
-    
     context = {'form': form, 'tarefa': tarefa}
 
     return render(request, "tarefas/edita.html", context)

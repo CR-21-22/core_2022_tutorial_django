@@ -1,21 +1,31 @@
 {% extends "tarefas/layout.html" %}
 
+{% block style %}
+ 
+{% endblock style %}
+
+
 {% block main %}
       
 <h3>Lista de Tarefas:</h3>
-<ul>
-    {% for tarefa in tarefas  %}
-      <li>{{ tarefa }} 
-        <a href="{% url 'edita' tarefa.id %}">
-          <button>Edita</button>
-        </a>      
 
-      </li>
+    {% for tarefa in tarefas  %}
+      <div class="tarefa">
+
+        <div>
+          {{ tarefa }}
+        </div> 
+
+        <div>
+          <a href="{% url 'edita' tarefa.id %}">
+            <button>Edita</button>
+          </a>        
+        </div>
+      </div>
     {% endfor %}
 
-</ul>
 <a href="{% url 'nova' %}">
-    <button>Nova tarefa</button>
+    <button id="nova">Nova tarefa</button>
 </a>
 
 {% endblock main %}

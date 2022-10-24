@@ -5,12 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        body {
+          font-family:Arial, Helvetica, sans-serif;
+          height: 100vh;
+          margin: 0;
+          display: grid;
+          grid-template-rows: 25vh 1fr 40px;
+        }
+    
+        main {
+          background-color: lightblue;
+          padding: 30px 100px;
+        }
+      
+        div.tarefa {
+          background-color: dodgerblue;
+          color: white;
+          margin: 10px;
+          padding: 10px;
+          border-radius: 10px;
+        }
+      
+        button {
+          background-color: yellow;
+          border-radius: 5px;
+          padding: 5px 20px;
+        }
+      
+        #nova {
+          background-color: #31c031;
+          margin: 10px;
+        }
+      
+        .tarefa {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+      
+        /* .tarefa div {
+          background-color: white;
+          border: 1px solid black;
+          color: black;
+        } */
+      
+        header {
+            background-color: khaki;
+            text-align: center;
+            font-size: 10vw;  /* unidade relativa */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: fantasy;
+        }
+        footer {
+            background-color: khaki;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      </style>   
+
+    {% block style %}
+      
+    {% endblock style %}
+
 </head>
 <body>
-    <h1>Tarefas</h1>
+    <header>
+        Tarefas
+    </header>
 
-    {% block main %}
+    <main>
+        {% block main %}
       
-    {% endblock main %}
+        {% endblock main %}    
+    </main>
+
+    <footer>
+        Universidade Lusofona, 2022
+    </footer>
 </body>
 </html>
